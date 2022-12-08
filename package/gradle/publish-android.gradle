@@ -13,13 +13,25 @@ artifacts {
 }
 
 afterEvaluate {
+    signingConfigs {
+      release {
+         // Everything comes from local.properties
+         Properties properties = new Properties()
+         if (project.rootProject.file('local.properties').exists()) {
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+            storeFile file(properties.getProperty('keystore.file'))
+            storePassword properties.getProperty('keystore.password')
+            keyAlias 'key0'
+            keyPassword properties.getProperty('keystore.password')
+         }
+    }
     publishing {
         publications {
             release(MavenPublication) {
                 pom {
                     name = project.name
                     description = project.description
-                    url = 'https://github.com/microg/cronet-build'
+                    url = 'https://github.com/Androidacy/cronet-build'
                     licenses {
                         license {
                             name = 'The Apache Software License, Version 2.0'
@@ -27,6 +39,10 @@ afterEvaluate {
                         }
                     }
                     developers {
+                        developer {
+                            id = 'com.androidacy'
+                            name = 'Alexandria @ Androidacy'
+                        }
                         developer {
                             id = 'microg'
                             name = 'microG Team'
@@ -37,9 +53,9 @@ afterEvaluate {
                         }
                     }
                     scm {
-                        url = 'https://github.com/microg/cronet-build'
-                        connection = 'scm:git:https://github.com/microg/cronet-build.git'
-                        developerConnection = 'scm:git:ssh://github.com/microg/cronet-build.git'
+                        url = 'https://github.com/Androidacy/cronet-build'
+                        connection = 'scm:git:https://github.com/Androidacy/cronet-build.git'
+                        developerConnection = 'scm:git:ssh://github.com/Androidacy/cronet-build.git'
                     }
                 }
 

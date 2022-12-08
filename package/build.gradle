@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2021, microG Project Team
+ * SPDX-FileCopyrightText: 2021, microG Project Team. 2022, Androidacy
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -25,8 +25,8 @@ buildscript {
 allprojects {
     apply plugin: 'idea'
 
-    group = 'org.microg'
-    version = '102.5005.125'
+    group = 'com.androidacy'
+    version = '108.0.5359.95'
 }
 
 subprojects {
