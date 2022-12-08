@@ -8,3 +8,4 @@
 /package/*/build/
 /package/*/libs/*.jar
 /package/cronet-native/src/main/jniLibs/*/*.so
+local.properties
