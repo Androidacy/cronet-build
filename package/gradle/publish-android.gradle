@@ -83,4 +83,5 @@ afterEvaluate {
         signing {
             sign release
         }
+    }
 }
