@@ -52,8 +52,6 @@ afterEvaluate {
             }
         }
         if (project.hasProperty('sonatype.username')) {
-            project.logger.lifecycle(project.getProperty('sonatype.username'))
-	    project.logger.lifecycle(project.getProperty('sonatype.password'))
 	    repositories {
                 maven {
                     name = 'sonatype'
