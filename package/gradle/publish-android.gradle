@@ -13,18 +13,6 @@ artifacts {
 }
 
 afterEvaluate {
-    signingConfigs {
-      release {
-         // Everything comes from local.properties
-         Properties properties = new Properties()
-         if (project.rootProject.file('local.properties').exists()) {
-            properties.load(project.rootProject.file('local.properties').newDataInputStream())
-            storeFile file(properties.getProperty('keystore.file'))
-            storePassword properties.getProperty('keystore.password')
-            keyAlias 'androidacy'
-            keyPassword properties.getProperty('keystore.password')
-         }
-    }
     publishing {
         publications {
             release(MavenPublication) {
@@ -64,24 +52,23 @@ afterEvaluate {
             }
         }
         if (project.hasProperty('sonatype.username')) {
-            repositories {
+            project.logger.lifecycle(project.getProperty('sonatype.username'))
+	    project.logger.lifecycle(project.getProperty('sonatype.password'))
+	    repositories {
                 maven {
                     name = 'sonatype'
-                    url = 'https://oss.sonatype.org/service/local/staging/deploy/maven2/'
+                    url = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
                     credentials {
-                        Properties properties = new Properties()
-         if (project.rootProject.file('local.properties').exists()) {
-            properties.load(project.rootProject.file('local.properties').newDataInputStream())
-                        username properties.getProperty('sonatype.username')
-                        password properties.getProperty('sonatype.password')
-                      }
+                        username project.getProperty('sonatype.username')
+                        password project.getProperty('sonatype.password')
                     }
                 }
             }
         }
     }
+    if (project.hasProperty('signing.keyId')) {
         signing {
-            sign release
+            sign publishing.publications
         }
     }
 }

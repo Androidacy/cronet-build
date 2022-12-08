@@ -1,114 +1,26 @@
-Usage:Usage:
-  sdkmanager [--uninstall] [<common args>] [--package_file=<file>] [<packages>...]
-  sdkmanager [--uninstall] [<common args>] [--package_file=<file>] [<packages>...]
-
-  sdkmanager --update [<common args>]  sdkmanager --update [<common args>]
-
-  sdkmanager --list [<common args>]  sdkmanager --list [<common args>]
-
-  sdkmanager --list_installed [<common args>]  sdkmanager --list_installed [<common args>]
-
-  sdkmanager --licenses [<common args>]  sdkmanager --licenses [<common args>]
-
-  sdkmanager --version  sdkmanager --version
-
-
-
-With --install (optional), installs or updates packages.With --install (optional), installs or updates packages.
-
-    By default, the listed packages are installed or (if already installed)    By default, the listed packages are installed or (if already installed)
-
-    updated to the latest version.    updated to the latest version.
-
-With --uninstall, uninstall the listed packages.With --uninstall, uninstall the listed packages.
-
-
-
-    <package> is a sdk-style path (e.g. "build-tools;23.0.0" or    <package> is a sdk-style path (e.g. "build-tools;23.0.0" or
-
-             "platforms;android-23").             "platforms;android-23").
-
-    <package-file> is a text file where each line is a sdk-style path    <package-file> is a text file where each line is a sdk-style path
-
-                   of a package to install or uninstall.                   of a package to install or uninstall.
-
-    Multiple --package_file arguments may be specified in combination    Multiple --package_file arguments may be specified in combination
-
-    with explicit paths.    with explicit paths.
-
-
-
-With --update, all installed packages are updated to the latest version.With --update, all installed packages are updated to the latest version.
-
-
-
-With --list, all installed and available packages are printed out.With --list, all installed and available packages are printed out.
-
-
-
-With --list_installed, all installed packages are printed out.With --list_installed, all installed packages are printed out.
-
-
-
-With --licenses, show and offer the option to accept licenses for allWith --licenses, show and offer the option to accept licenses for all
-
-     available packages that have not already been accepted.     available packages that have not already been accepted.
-
-
-
-With --version, prints the current version of sdkmanager.With --version, prints the current version of sdkmanager.
-
-
-
-Common Arguments:Common Arguments:
-
-    --sdk_root=<sdkRootPath>: Use the specified SDK root instead of the SDK    --sdk_root=<sdkRootPath>: Use the specified SDK root instead of the SDK
-
-                              containing this tool                              containing this tool
-
-
-
-    --channel=<channelId>: Include packages in channels up to <channelId>.    --channel=<channelId>: Include packages in channels up to <channelId>.
-
-                           Common channels are:                           Common channels are:
-
-                           0 (Stable), 1 (Beta), 2 (Dev), and 3 (Canary).                           0 (Stable), 1 (Beta), 2 (Dev), and 3 (Canary).
-
-
-
-    --include_obsolete: With --list, show obsolete packages in the    --include_obsolete: With --list, show obsolete packages in the
-
-                        package listing. With --update, update obsolete                        package listing. With --update, update obsolete
-
-                        packages as well as non-obsolete.                        packages as well as non-obsolete.
-
-
-
-    --newer: With --list, show only new and/or updatable packages.    --newer: With --list, show only new and/or updatable packages.
-
-
-
-    --no_https: Force all connections to use http rather than https.    --no_https: Force all connections to use http rather than https.
-
-
-
-    --proxy=<http | socks>: Connect via a proxy of the given type.    --proxy=<http | socks>: Connect via a proxy of the given type.
-
-
-
-    --proxy_host=<IP or DNS address>: IP or DNS address of the proxy to use.    --proxy_host=<IP or DNS address>: IP or DNS address of the proxy to use.
-
-
-
-    --proxy_port=<port #>: Proxy port to connect to.    --proxy_port=<port #>: Proxy port to connect to.
-
-
-
-    --verbose: Enable verbose output.    --verbose: Enable verbose output.
-
-
-
-* If the env var REPO_OS_OVERRIDE is set to "windows",
-  "macosx", or "linux", packages will be downloaded for that OS.* If the env var REPO_OS_OVERRIDE is set to "windows",
-  "macosx", or "linux", packages will be downloaded for that OS.
-
+/home/androidacy/cronet-build/chromium/src/third_party/webrtc/examples/aarproject/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/flatbuffers/src/android/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/flatbuffers/src/kotlin/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/libavif/src/android_jni/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/tflite/src/tensorflow/lite/java/ovic/demo/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/tflite/src/tensorflow/lite/java/demo/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/grpc/src/src/android/test/interop/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/grpc/src/examples/android/helloworld/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/geospatial_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/computervision_c/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/persistent_cloud_anchor_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/recording_playback_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/augmented_image_c/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/ml_kotlin/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/hello_ar_kotlin/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/augmented_image_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/hello_ar_c/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/computervision_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/raw_depth_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/shared_camera_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/cloud_anchor_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/augmented_faces_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/arcore-android-sdk/src/samples/hello_ar_java/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/skia/platform_tools/android/apps/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/mockito/src/gradle.properties
+/home/androidacy/cronet-build/chromium/src/third_party/libwebp/src/gradle.properties
