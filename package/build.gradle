@@ -26,7 +26,7 @@ allprojects {
     apply plugin: 'idea'
 
     group = 'com.androidacy'
-    version = '108.0.5359.125'
+    version = '109.0.5414.75'
 }
 
 subprojects {
