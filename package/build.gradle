@@ -4,17 +4,18 @@
  */
 
 buildscript {
-    ext.androidBuildGradleVersion = '4.1.0'
+    ext.androidBuildGradleVersion = '7.4.1'
 
-    ext.androidBuildVersionTools = '30.0.2'
+    ext.androidBuildVersionTools = '33.0.2'
 
     ext.androidMinSdk = 14
-    ext.androidTargetSdk = 29
-    ext.androidCompileSdk = 30
+    ext.androidTargetSdk = 33
+    ext.androidCompileSdk = 33
 
     repositories {
         jcenter()
         google()
+	mavenCentral()
     }
 
     dependencies {
@@ -26,13 +27,14 @@ allprojects {
     apply plugin: 'idea'
 
     group = 'com.androidacy'
-    version = '109.0.5414.75'
+    version = '110.0.5481.110'
 }
 
 subprojects {
     repositories {
         jcenter()
         google()
+        mavenCentral()
     }
 }
 

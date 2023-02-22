@@ -4,4 +4,4 @@
   ~ SPDX-License-Identifier: Apache-2.0
   -->
 
-<manifest package="org.microg.cronet.common"/>
+<manifest package="com.androidacy.cronet.common"/>
