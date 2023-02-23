@@ -6,7 +6,7 @@ ROOT=$PWD
 
 PATH=$ROOT/depot_tools:$PATH
 
-cd chromium/src
+cd chromium/src || exit
 
 echo "## Running gclient runhooks..."
 gclient runhooks

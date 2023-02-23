@@ -17,17 +17,17 @@ PATH=$ROOT/depot_tools:$PATH
 if ! [ -d "$ROOT/chromium" ]; then
   echo "## Initializing chromium..."
   mkdir "$ROOT/chromium"
-  cd "$ROOT/chromium"
+  cd "$ROOT/chromium" || exit
 
   gclient config "https://chromium.googlesource.com/chromium/src.git"
   echo 'target_os = ["android"]' >> .gclient
 
   git init -q src
-  cd src
+  cd src || exit
   git remote add -t $CHROMIUM_TAG origin "https://chromium.googlesource.com/chromium/src.git"
 fi
 
-cd "$ROOT/chromium/src"
+cd "$ROOT/chromium/src" || exit
 
 echo "## Fetching chromium..."
 # We need to make sure we have the commit with latest Change-Id

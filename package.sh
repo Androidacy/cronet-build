@@ -17,5 +17,5 @@ cp -r chromium/src/out/Release-arm/cronet/libs/armeabi-v7a package/cronet-native
 cp -r chromium/src/out/Release-x64/cronet/libs/x86_64 package/cronet-native/src/main/jniLibs
 cp -r chromium/src/out/Release-x86/cronet/libs/x86 package/cronet-native/src/main/jniLibs
 
-cd package
+cd package || exit
 ./gradlew build
