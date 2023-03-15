@@ -15,7 +15,6 @@ android {
         versionName version
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
-        ndkVersion '22.1.7171670'
     }
 
     compileOptions {

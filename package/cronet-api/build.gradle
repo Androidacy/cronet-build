@@ -15,8 +15,6 @@ android {
         versionName version
         minSdkVersion androidMinSdk
         targetSdkVersion androidTargetSdk
-        consumerProguardFiles 'lib-proguard-rules.txt'
-        ndkVersion '22.1.7171670'
     }
 
     compileOptions {
