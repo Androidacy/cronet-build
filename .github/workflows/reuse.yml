@@ -5,7 +5,7 @@ name: REUSE Compliance Check
 on: [pull_request, push]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v2
     - uses: fsfe/reuse-action@v1
